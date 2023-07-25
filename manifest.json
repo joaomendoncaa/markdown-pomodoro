@@ -1,0 +1,11 @@
+{
+	"id": "markdown-pomodoro",
+	"name": "Markdown Pomodoro",
+	"version": "1.0.0",
+	"minAppVersion": "0.15.0",
+	"description": "The start of markdown pomodoro.",
+	"author": "João Mendonça",
+	"authorUrl": "https://www.joaomendonca.net",
+	"fundingUrl": "https://www.buymeacoffee.com/joaomendonca",
+	"isDesktopOnly": false
+}
