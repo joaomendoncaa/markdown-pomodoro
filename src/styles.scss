@@ -5,21 +5,45 @@
 		var(--accent-l)
 	);
 
+	width: max-content;
+
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	width: 100px;
-	height: 50px;
+
+	background: var(--color-base-20);
+	border-radius: 5px;
 
 	> span {
 		color: white;
-		font-size: 1rem;
+		font-size: var(--font-text-size);
 	}
 
-	> svg {
-		> path {
-			fill: var(--obsidian-workspace-accent-hsl);
-			stroke: var(--obsidian-workspace-accent-hsl);
+	.pomodoro__widget-controls {
+		display: flex;
+		align-items: center;
+		gap: 3px;
+		margin: 0 2px;
+
+		> button {
+			padding: 3px;
+			cursor: pointer;
+			background: transparent;
+			aspect-ratio: 1;
+			border: none;
+			box-shadow: none;
+
+			> svg {
+				width: var(--font-small);
+			}
+		}
+
+		.pomodoro__widget-btn-play {
+			> button {
+				> svg {
+					width: var(--font-smallest);
+				}
+			}
 		}
 	}
 }

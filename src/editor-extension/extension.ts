@@ -23,9 +23,12 @@ class PomodoroCheckboxesPlugin implements PluginValue {
 		this.decorations = this.buildDecorations(update.view);
 	}
 
-	destroy() {}
-
 	buildDecorations(view: EditorView): DecorationSet {
+		console.log(
+			performance.now(),
+			"PomodoroCheckboxesPlugin:buildDecorations"
+		);
+
 		const builder = new RangeSetBuilder<Decoration>();
 
 		for (let { from, to } of view.visibleRanges) {

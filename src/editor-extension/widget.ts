@@ -4,28 +4,26 @@ import icons from "../icons";
 export class PomodoroWidget extends WidgetType {
 	constructor(readonly checked: boolean) {
 		super();
+
 		console.log(performance.now(), "PomodoroWidget:constructor");
 	}
-
-	// eq(other: PomodoroWidget) {
-	// 	console.log(performance.now(), "PomodoroWidget:eq");
-
-	// 	return other.checked == this.checked;
-	// }
 
 	toDOM(_: EditorView): HTMLElement {
 		console.log(performance.now(), "PomodoroWidget:toDOM");
 
-		let container = document.createElement("div");
+		let container = document.createElement("span");
 		container.setAttribute("aria-hidden", "true");
 		container.className = "cm-boolean-toggle";
 
 		container.innerHTML = /*HTML*/ `
-			<div class="pomodoro__widget-container">
+			<span class="pomodoro__widget-container">
 				<input type="checkbox" />
 				<span>25:00</span>
-				${icons.play}
-			</div>
+				<div class="pomodoro__widget-controls">
+					<button class="pomodoro__widget-btn-play">${icons.play}</button>
+					<button class="pomodoro__widget-btn-stopwatch">${icons.stopwatch}</button>
+				</div>
+			</span>
 		`;
 
 		return container;
